@@ -11,13 +11,21 @@ import Footer from './components/Footer';
 import EyeTracker from './components/EyeTracker';
 import MotivationalPopup from './components/MotivationalPopup';
 import KonamiCode from './components/KonamiCode';
+import ThanksMarquee from './components/ThanksMarquee';
+import MouseSparkle from './components/MouseSparkle';
+import RoseRain from './components/RoseRain';
 
 export default function App() {
-  return (
+  return (<>
+    <RoseRain />
     <Router>
       <Navbar />
+      <ThanksMarquee />
+      <MouseSparkle />
+
       <EyeTracker />
       <KonamiCode />
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />
@@ -28,5 +36,5 @@ export default function App() {
       </Routes>
       <Footer />
     </Router>
-  );
+  </>);
 }

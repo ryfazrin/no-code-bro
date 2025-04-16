@@ -4,8 +4,15 @@ body {
   font-family: 'Press Start 2P', cursive;
   background: linear-gradient(135deg, #000, #2d033b, #ff0055);
   color: #00FF88;
-  
+  cursor: url('https://img.icons8.com/color-pixels/32/rose.png') 16 16, auto;
 }
+
+.sparkle {
+  background: radial-gradient(white, hotpink);
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
 .glitch {
   position: relative;
   color: #00ff88;
@@ -187,3 +194,28 @@ body {
     opacity: 0.1;
   }
 }
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.petal {
+  animation: fall linear infinite;
+}
+
